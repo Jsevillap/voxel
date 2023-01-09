@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #2f5698;
+  --accent-color: #9dc3e5;
+  --main-color-darker: #203864;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--main-color);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: transform 350ms ease;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.container > img {
+  max-width: 550px;
+}
+
+.container > h1 {
+  font-size: clamp(3rem, 10vw, 4.7rem);
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 20ch;
+  line-height: 1;
+}
+
+.contact-information-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  gap: 1.2rem;
+}
+
+.contact-information {
+  padding: 0.7rem 1.2rem;
+  text-align: center;
+  background-color: var(--main-color-darker);
+  color: var(--accent-color);
+  border-radius: 100vw;
+}
+
+a:hover {
+  transform: translateY(-6px);
+}
