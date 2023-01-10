@@ -35,6 +35,7 @@ a {
   text-decoration: none;
   color: var(--accent-color);
   transition: transform 350ms ease;
+  position: relative;
 }
 
 .container {
@@ -75,6 +76,25 @@ a {
   border-radius: 100vw;
 }
 
-a:hover {
+a:hover,
+a:focus {
   transform: translateY(-6px);
+}
+
+a:focus {
+  outline: 1px solid var(--main-color-darker);
+  outline-offset: 5px;
+}
+
+/*Screen Reader Only Class - Class to make an element only visible for screen readers*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
 }
